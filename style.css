@@ -68,6 +68,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    transition: .4s ease;
 }
 
 .circle.active {
@@ -75,17 +76,27 @@ body {
     color: #000;
 }
 
-button {
-    padding: 10px 30px;
+.btn {
+    padding: 8px 30px;
+    margin: 5px;
     background-color: var(--line-border-fill);
     color: #022B3A;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
 }
 
-button:disabled {
+.btn:disabled {
     background-color: var(--line-border-empty);
     cursor: not-allowed;
 }
 
-button:active {
-   transform: translateY(0.98);
+.btn:active {
+   transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: none;
 }
