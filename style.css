@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --line-border-fill: #3498db;
+    --line-border-empty: #e0e0e0;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Muli', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    color: #022B3A;
+}
+
+.container {
+    text-align: center;
+}
+
+.prog-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+    max-width: 100%;
+    width: 350px
+}
+
+.prog-container::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    background-color: var(--line-border-empty);
+    top: 50%;
+    left: 0;
+    height: 4px;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+
+.progress {
+    width: 0%;
+    position: absolute;
+    background-color: var(--line-border-fill);
+    top: 50%;
+    left: 0;
+    height: 4px;
+    z-index: -1;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+}
+
+.circle {
+    color: #999;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--line-border-empty);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.circle.active {
+    border-color: var(--line-border-fill);
+    color: #000;
+}
+
+button {
+    padding: 10px 30px;
+    background-color: var(--line-border-fill);
+    color: #022B3A;
+}
+
+button:disabled {
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+}
+
+button:active {
+   transform: translateY(0.98);
+}
