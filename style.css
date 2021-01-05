@@ -36,7 +36,7 @@ body {
 
 .prog-container::before {
     content: '';
-    width: 100%;
+    width: 99%;
     position: absolute;
     background-color: var(--line-border-empty);
     top: 50%;
@@ -47,6 +47,7 @@ body {
 }
 
 .progress {
+    max-width: 99%;
     width: 0%;
     position: absolute;
     background-color: var(--line-border-fill);
@@ -94,7 +95,7 @@ body {
 }
 
 .btn:active {
-   transform: scale(0.98);
+    transform: scale(0.98);
 }
 
 .btn:focus {
